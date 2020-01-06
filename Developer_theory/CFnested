@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								CLOUDFORMATION NESTED STACK
+								---------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Nested stack allow reuse of cloudformation code for common use cases.
+* e.g. standard configuration for a load balancer, web server, application server etc.
+* Instead of copying out the code each time, create a standard template for each common use case and refrence from within your cloudformation template

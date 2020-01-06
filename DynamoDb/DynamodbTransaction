@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								  DYNAMODB TRANSACTION
+								 ----------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* ACID Transaction (Atomic,consistent ,ioslated,durable)
+* Read or Write multiple items across multiple tables as an all or nothing operation
+* Check for a pre-requisite condition before writing to a table   

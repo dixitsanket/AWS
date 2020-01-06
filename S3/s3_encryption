@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+									ENCRYPTION
+									----------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* In Transit: (use when to upload/download file from bucket to pc or pc to bucket)
+	-SSL/TLS (Trasport layer security)(uses HTTPs protocol)
+
+* At Rest: 
+	- Server Side Encryptions:
+		- S3 Managed Keys - SSE-S3
+		- AWS key managment service, Managed Keys, SSE-KMS
+		- Servee side encryption with customer provided keys - SSE-C
+
+	- Client Side Encryption
+ 
+-> Enforcing Encryption on S3 Buckets:
+
+* Every time a file is uploaded to S3, a PUT request is initiated.
+
+* This is what PUT request looks like:
+
+	PUT/myFile HTTP/1.1
+	Host:myBucket.s3.amazonaws.com
+	Date:Wed,25 Apr 2018 09:50:00 GMT
+	Authorization: authorization string
+	Content-Type:text/plain
+	Content-Length:27364
+	x-amz-meta-author:faye
+	Expect: 100-continue
+	[27364 bytes of object data]
+
+* if the file is to be encrypted at upload time, the x-amz-server-side-encryption parameter will be included in the rquest header
+
+* Two options are currently available:
+	- x-amz-server-side-encryption:AES256 (SSE-S3-S3 managed keys)
+	- x-amz-server-side-encryption:ams:kms (SSE-KMS-KMS managed keys)
+
+* When this parameter is included in the header of the PUT request,it tells S3 to encrypt the object at the time of upload, using the specified encryption method.
+
+* You can enforce the use of Server Side Encryption by using a Bucket Policy which denies any S3 PUT request which doesnt include the x-amz-server-side-encryption parameter in the request header.
+
+* The following request tell S3 to encrypt the file using SSE-S3 (AES 256) at the time of upload:
+
+	PUT/myFile HTTP/1.1
+	Host:myBucket.s3.amazonaws.com
+	Date:Wed,25 Apr 2018 09:50:00 GMT
+	Authorization: authorization string
+	Content-Type:text/plain
+	Content-Length:27364
+	x-amz-meta-author:faye
+	Expect: 100-continue
+	x-amz-server-side-encryption:AES256
+	[27364 bytes of object data]
+
+
+
+

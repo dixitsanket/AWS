@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									CLOUDWATCH
+									----------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amaon Cloudwatch is a monitoring service to monitor your AWS resources, as well as the applications that you run on AWS.
+
+-> Whats can cloudwatch do
+
+CloudWatch can monitor things like:
+* Compute
+	* Autoscaling groups
+	* Elastic Load Balancers
+	* Route53 Health Check
+* Storage and Content Delivery
+	* EBS Volumes
+	* Storage Gateways
+	* CLoudFront
+* Databases & Analytics
+	* DynamoDB		
+	* Elasticcache Nodes
+	* RDS instace	
+	* Elastic MapReduce Job FLows
+	* Redshift
+* Other 
+	* SNS Topics 
+	* SQS Queues	
+	* opsworks	
+	* CloudWatch logs
+	* Estimated Charges on your AWS bill
+
+-> Host level metrics consist of 
+
+* CPU
+* Network
+* Disk
+* Status Check
+
+
+

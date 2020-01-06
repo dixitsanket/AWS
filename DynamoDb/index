@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									INDEXES
+									-------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In SQL databases,an index is a data structure which allows to you perform fast queries on specific column in a table.You select the column that you want to include in the index and run you searches on the index-rather than on the entire dataset.
+
+In DynamoDB, 2 types of index are supported to help speed-up your DynamoDB queries:
+
+* Local Secondary index
+* Global Secondary index
+
+-> Local Secondary Index
+
+* Can only be created when you are creating your table
+* You cannot add,remove,or modify it later
+* It has the same partition key as your original table
+* But a different Sort Key 
+* Gives you a different view of your data,organised according to an alternative sort key 
+* Any queries based on this sort key are much faster using the index than the main table
+* e.g. Partition Key:UserID
+	Sort Key: account creation date
+
+-> Global Secondary index
+
+* You can create when you create your table, or add it later 
+* Different partition key as well as a different sort key
+* So give a completely different view of the data
+* Speeds up any queries relating to this alternative partition and sort key
+* e.g. Partition Key:email address
+	Sort Key:last log-in date
+

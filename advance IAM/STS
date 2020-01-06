@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									STS
+									---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* assume-role-with-web-identity is an API provided by STS(Security Token Service)
+
+* Returns temprorary security credential for users authnticated by a mobile or web id provider like amazon,facebook,google,etc
+
+* For mobile application,Cognito is recommended
+
+* Regular web application can use the STS assume-role-with-web-identity API
+

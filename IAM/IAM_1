@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								IDENTITY ACCESS MANAGMENT
+								-------------------------	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+IAM is allow u to manage user and there level access to the aws consol.
+
+WHAT DOES IAM GIVES USER 
+|
+|
+centralied control of aws account
+shared access to aws account
+granual permission (use to grant  system privileges)
+identity fedration (links user identity across multiple security domain and use there services)
+multifactor auth
+temporary access for user and devices and services as necessary
+alow to set up your own password rotation policy 
+integrate with many different aws account
+support PCI DSS compilance (Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that ALL companies that accept, process, store or transmit credit card information maintain a secure environment.)
+
+CRUCIAL TERMS
+|
+|
+Users - End Users
+Groups - A collection of user under one set of permission
+Roles - Create role and can then assign them to AWS resources 
+Policies - Documents that define one(or more ) permission
+
+
+

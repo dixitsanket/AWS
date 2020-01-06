@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+							PROVISIONED THROUGHPUT EXCEEDED EXCEPTION
+							-----------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Your requests rate is too high for the read/write capacity provisioned on your dynamodb table
+* SDK will automatically retries the requests until successful
+* If you are not using SDK you can:
+	* Reduce request frequency
+	* Use Exponential Backoff
+
+-> Exponential Backoff
+
+* Many component in a network can generate error due to being overloaded
+* In addition to simple retries all AWS SDK use Exponential Backoff
+* Progressively longer wait between consecutive retries e.g. 50ms,100ms,200ms.... for improved flow control
+* if after 1min this doesnt work,your request size may be exceeding the throughput for your read/write capacity
+

@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									   SNS
+									   ---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amazon Simple Notification service is a web service that make it easy to setup ,operate, and send notification from the cloud.
+
+It provides developer with highly scalable, flexible, and cost effective capability to publish message from an application and immediately deliver them to subscribers or other application
+
+Push notification to apple,google,fire os, and windows devices as well as android devices in china with baidu cloud push
+
+Beside pushing cloud notifiction directly to mobile devices,amazon SNS can also deliver notifiction by sms text message or email to amazon simple queue service(SQS) queue,or to any HTTP endpoint.
+
+SNS notification can also trigger lambda function:
+When a message is publised to an SNS topic that has a lambda function suscribed to it,the lambda function is invoked with the payload of the published message.The lambda function recieves the message payload as an input parameter and can manipulate the information in the message,publish the message to another SNS topic,or send the message to other AWS services.
+
+-> SNS Topics:
+
+SNS allows you to group multiple recipients using topics.A topic is an "access point" for allowing recipients to dynamically  subscribe for identical copies of the same notification.
+
+One topic can support deliveries to multiple endpoint types-for example,you can group togather ios,Android and SMS recipients.When you publish once to a topic,SNS delivers appropriatly formatted copies of your message to each subscriber.

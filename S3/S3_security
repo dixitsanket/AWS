@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									S3 Security
+									-----------
+	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+By default, all newly creared bucket are private
+You can set up access control to bucket useing:
+	-Bucket Policies - Applied at bucket level.
+	- Access Control lists - Applied at an object level
+S3 bucket can be configured to create access log, which log all requests made to the s3 bucket. These logs can be written to another bucket.

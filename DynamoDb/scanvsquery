@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									SCAN VS QUERY
+									-------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> QUERY
+
+A query operation finds items in a table based on the primary key attribute  and a distinct value to search for.
+
+e.g. select an item where the user ID is equal to 212, will select all the attribute for that item, e.g. first name,surname,email etc.
+
+Use an optional sort key is a timestamp, you can refine the query to only select items with a timestamp of the last 7 days.
+
+By default, a query returns all the attributes for the item but you can use the projectionExpression parameter if you want the query to only return the specific attributes you want.
+
+e.g. if you only want to see the email address rather than all the attributes 
+
+-> SCAN
+
+A Scan operation examines every item in the table.
+
+By default returns all data attributes.
+
+Use the projectionExpression parameter to refine the scan to only return the attributes you want.
+
+-> Query OR Scan 
+
+Scan dumps the entire table,then filter out the values to provide the desired result - removing the unwanted data
+
+This add an extra step of removing the data you dont want 
+
+As the table grows, the scan operation takes longer.
+
+Scan operation on a large table can use up the provisioned throughput for a large table in just single operation 
+
+-> How to improve performance
+
+You can reduce the impact of a query or scan by setting a smaller page size which uses fewer read operations
+
+e.g. set the page size to return 40 items.
+
+Larger number of smaller operations will allow other requests to succeed without throtteling
+
+Avoid using scan operation if you can: design tables in a way that you can use the query, Get, or BatchGetItem APIs.
+
+By default,a scan operation processes data squentially in returning 1MB increment before moving on to retrieve the next 1MB of data.It can only scan one partition at a time
+
+You can configure dynamodb to use parallel scans instead by logically dividing a table or index into segment and scanning each segment in parallel
+
+Best to avoid parallel scans if your table or index is already incurring heavy read/write activity from other applications.

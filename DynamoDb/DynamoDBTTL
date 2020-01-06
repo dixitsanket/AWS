@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									DYNAMODB TTL
+									------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Time To Live attribute defines an expiry time for your data
+* Expired items marked for deletion
+* Great for removing irrelevant or old data:
+	* Session data
+	* Event logs
+	* Temprory data
+* Reduce cost by automatically removing data which is no longer relevant
+

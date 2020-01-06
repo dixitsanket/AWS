@@ -1,0 +1,7 @@
+-> Amazon SES:
+
+Amazon SES(simple email service) is a scalbale and highly available email service designed to help marketing teams and application developer send marketing,notification,and trabsactional emails to their customers using a pay as you go model.
+
+Can also be used to receive emails:incoming mails can be delivered automatically to an S3 bucket.
+
+Incoming mails can be used to trigger lambda function and SNS notification.

@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									KMS								
+									---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS key managment service (AWS KMS) is a managed service that make it easy for you to create and control the encryption keys used to encrypt your data.AWS KMS is integrated with other AWS services including,EBS,S3,Amazon Redshift,Amazon Redshift,Amazon Elastic Transcoder,Amazon Workmail,Amazon Relational Database Service(Amazon RDS),and other to make it simple to encrypt your data with encryption key that you manage.
+

@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									   SQS
+									   ---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amazon SQS is web service that gives you access to message queue that can be used to store message while waiting for a computer to process them.
+
+Amazon SQS is a distributed queue system that enable web service applicationto quickly and reliable queue message that one component in the applications generates to be consumed by the another component.A queue is a temprory repository for message that are awaiting processing.
+
+Using Amazon SQS,you can decouple the components of an application so they run independly,easing message managment between components.
+
+Any component of a distributed application can store messages in the queue.Message can contain upto 256KB Of text in any format.Any component can retrive the messages programatically using the Amazon SQS API.
+
+-> There are two types of Queue:
+
+* Standard Queue (default)
+* FIFO Queue (First-in-first-out)
+
+-> Standard Queue 
+Amazon SQS offers standard as the default queue type.A standard queue lets you have a nearly-unlimited number of transaction per second.Standard queue gurantee that a message is delivered atleast once.However,occasionally(because of the highly-distributed architecture that allows high throughput),more than one copy of a message might be delivered out of order.Standard queues provide best-effort ordering which ensure that message are generally delivered in the same order as they sent.
+
+-> FIFO Queue
+The FIFO queue complements the standard queue.The most important features of this queue type are FIFO(first in first out) delivery and exactly once processing:The order in which message are sent and received is strictly preserved and messsage is delivered once and remains avilable until a consumer processes and delets it; duplicate are not introduced into the queue.FIFO queues also support message groups that allow multiple ordered message group within single queue.FIFO queue are limited to 300 transaction per second (TPS),but have all capabilities of standard queues.
+
+-> SQS Long Polling:
+
+Amazon SQS long polling is a way to retrieve message from your amazon SQS queues
+
+While the regular short polling returns immediatly(even if the message queue being polled is empty),long polling doesnt return a response until a message arrives in the message queue,or the long poll time out.

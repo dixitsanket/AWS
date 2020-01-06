@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+									API GATEWAY
+									-----------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+An API is an Application Programming Interface.
+
+-> Types Of API:
+
+REST API (Representational State Transfer)
+	Uses JSON
+
+SOAP API (Simple Object Access Protocol)
+	Uses XML
+
+-> What is API Gateway??
+
+Amazon API Gateway is a fully managed service that makes it easy for developer to publish, maintain, monitor and secure APIs at any scale. With few clicks in the AWS Managment Console,you can create an API that acts as a "front door" for application to access data,buisness logic, or functionality from your back end services, such as application running on Amazon Elastic CLoud Computing(EC2), code running on AWS Lambda, or any web application.
+
+-> What can API Gateway Do?
+ 
+* Expose HTTP endpoints to define a RESTful API
+* Serverless-ly connect to service like lambda and dynamodb
+* Send each API endpoint to different target
+* Run efficiently with low cost
+* Scale effortlessly
+* Track and control usage by API Key
+* Throttle requests to prevent attacks
+* Connect to cloudwatch to log all requests for monitoring
+* Maintain multiple version of your API
+
+-> How do I configure API Gateway?
+
+* Define an API (container)
+* Define Resources and nested Resources (URL PATH)
+* For Each Resources:
+	* Select supported HTTP methods(verbs)
+	* Set security
+	* Choose target(such as EC2,Lambda,DynamoDB,etc)
+	* Set request and response transformations
+* Deploy API to a Stage
+	* Uses API Gateway domain,by default
+	* Can use custom domain
+	* Now supports AWS Certification Manager: free SSL/TLS certs
+
+-> What is API Caching?
+
+You can enable API caching in Amazon API Gateway to cache your endpoints response. With caching, you can reduce the number of call made to your endpoit and also improve the latency of the requests to your API.When you enable caching for a stage,API Gateway caches responses from your endpoint for a specified TTL period,in seconds. API Gateway then respond to the request by looking up the end point response from the cache instead of making request to endpoint.
+
+

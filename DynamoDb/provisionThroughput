@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									    DAX
+							            	    ----
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* DynamoDB Accellorator or DAX is a fully managed cluster in memory cache for dynamodb
+
+* Delivers up to a 10x read performance imrovement 
+* Microsecond performance for millions  of requests per second
+* Ideal for read-heavy and bursty workloads
+* e.g. auction applications,game and retail site during black friday promotions
+* DAX is a write-through caching service-this means data is written to the cache as well as the back end store at the same time.
+* Allow you point your DynamoDB API calls at the DAX cluster
+* If the item you are quering is in the cache(cache hit), DAX returns the result to the application
+* If the item is not available(cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB
+* Retrival of Data from DAX reduces the read load on DynamoDB table
+* May be able to reduce Provisioned read capacity
+* Caters for eventually consistent read only- so not suitable for application that require strongly consistent reads
+* Write intensive applications
+* Applications that do not perform many read operations
+* Applications that do not require microsecond response times

@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									S3
+									--
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+S3 provides developer and it team with secure, durable, highly scalable object storage. Amazon s3  is easy to use , with a simple web service interface to store and retrieve any amount of data from anywhere on the web.
+
+S3 is safe place to store file.
+it is object based storage.
+the data is spread across multiple devices and facilities.
+
+-> S3 Basics
+
+s3 is object based - i.e. allows you to upload files
+file can be from 0bytes to 5tb
+there is unlimited storage
+file are stored in buckets (similar to a folder)
+S3 is a universal namespace. That is name must be unique globally
+when you upload a file to s3 to recieve code 200 if upload was succesful
+
+-> Data Consistency model for s3 
+
+Read After write consistency for PUTS of new object
+Eventual consistency for overwrite PUTs and DELETS (can take some time to propogate)
+
+-> S3 is a simple key-value store
+
+S3 is object based.Object consist of the following:
+-Key (this is simply the name of the object)
+-Value (this is simply the data, which is made up of sequence of bytes)
+-Version ID (important for versioning)
+-Metadata (Data about data you are storing)
+-Subresources - Bucket specific configuration:
+	- Bucket Policies, Access control lists,
+	- Cross Origin Resource Shareing (CORS)
+	- Transfer Acceleration
+-Built for 99.99% avalibility for the s3 platform
+-Amazon gurantee 99.9 % availabilty
+-Amazon gurantees 99.99999999999% durability for s3 information.
+-Tiered Storage Available.
+-Lifecycle Managment
+-Versioning
+-Encryption
+-Secure you data - ACCESS
+
+-> S3 - Storage Tiers/Classes
+
+* S3: 99.99% availability, 99.99999999999% durability ,store redundant across multiple devices in multiple facilities and is deisgned to sustain the loss of 2 facilities concurrently.
+
+* S3-IA (Infrequently Accessed): For data that is accessed less frequent, but requires rapid access when needed.Lower fee than S3, but you are charged a retrival fee
+
+* S3 one Zone IA : Same as IA howerver data is stored in a single avalibility zone only,still 99.99999999999% durability, but only 99.5% avalability .Cost is 20% less than regular S3-IA.
+
+* Reduce Redundancy Storage: Design to provide 99.99% avalibilty of object over given year. Used for data that can be recreated if lost eg thumnails 
+
+* Glacier: Very cheap, but used for archive only.optimized for data that is infrequently accessed and it takes  3-5 hours to restore glacier.
+
+* S3 Intelligent Tiering :
+	-Unknow or unpredictable access patterns
+	-2 tiers - frequent and infrequent access
+	-Automatically moves your data to most cost-effective tier based on how frequent yor object is accessed
+	-99.99999999999% durability
+	-99.9 availiblity over a given year
+	-optimizes cost
+	-No fees for accessing your data but a small monthly fee for monitoring/automation $0.0025 per 1,000 objects

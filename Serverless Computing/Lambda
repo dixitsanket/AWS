@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+									LAMBDA
+								        -------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> What is Lambda?
+
+* Data Centres
+* Hardware
+* High Level Languages
+* Operating System
+* Application Layer/AWS APIs
+* AWS Lambda
+
+AWS Lambda is a compute service where you can upload your code and create a lambda function.AWS lambda takes care of provisoning and manageing the server that you use to run the code. You dont have to worry about operating system,patching,scaling etc. You can use lambda in the following ways.
+
+* AS an event-driven compute service where AWS lambda runs your code in response to events. These events could be changes to data in an amazon S3 bucket or an Amazon DynamoDB table.
+* AS a compute service to run your code in response to HTTP requests using Amazon API Gateways or API calls made using AWS SDKs
+
+-> Advantages
+
+* NO SERVERS!
+* Continous Scailing
+* Cheap
+

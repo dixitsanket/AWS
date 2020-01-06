@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								ADVANCE CODE DEPLOYMENT
+								-----------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The AppSpecs File is used to define the parameters that will used for a CodeDeploy deployment.The file structure depends on weather you are deploying to lambda or EC2 / on premises
+
+For lambda deployment,the appspec file may be written in YAML or Json an contains the following fields:
+
+	* Version: Reserved for future use-currently the only allowed value is 0.0
+	* Resources: The name and properties of the lambda function to deploy
+	* Hooks: Specifies Lambda function to run at set points in the deployment lifecycle to validate the deployment e.g validation tests to run before allowing traffic to be sent to your newly deployed instance.

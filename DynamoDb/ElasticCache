@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									ELASTIC CACHE
+									-------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Elasticcache - in memory cache in the cloud
+* Improves performance of web application,allowing you to retrive information from fast in-memory caches rather than slower disk based databases
+* Site between your appllication and the databse:
+	* e.g. an application frequently requesting specific product information for your best selling products
+* Takes the load off your databases
+* Good if your database is particularly read-heavy and the data is not changing frequently
+
+-> Benefits
+* Improves performance for read-heavy workloads
+	* e.g. Social Networking,gaming media sharing,Q&A portals
+* Frequently-accessed data is store in memory for low-latency access improving the overall performance of your application
+* Also good for compute heavy workloads
+	* e.g. recommendation engines
+* Can be used to store results of I/O intesive database queries or output of compute-intensive calculations.
+
+-> Type of Elasticache
+
+* Memcached
+	* Widely adopted memory object caching system
+	* Multi-Threaded
+	* No Multi-AZ capability
+
+* Redis
+	* Open-Source in-memory key value store
+	* Supports more complex data structures: sorted sets and lists
+	* Support master/slave replication and multi AZ for crossAZ redundancy
+
+-> Lazy Loading and TTL
+
+* Specific the number of second until the key(data) expires to avoid keeping stale data in the cache
+* Lazy Loading treats an expired key as a cache miss and causes the application to retrive the data from the database and subsiquently write the data into the cache with a new TTL
+* Does not eliminate stale data-but helps to avoid

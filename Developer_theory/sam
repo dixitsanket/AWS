@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								SERVERLESS APPLICATION MODEL
+								----------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* Serverless Application Model(SAM) is an extension to CloudFormation used to define serverless applications.
+
+* Simplified syntax for defining severless resources: APIs, LAmbda Function,DynamoDB Tables etc
+
+* Use the SAM CLI to package your deployment code,upload it to S3 and deploy your serverless application
+
+-> Commands
+
+* Create an S3
+bucket: aws s3 mb s3://cfsambucket --region eu-west-2  #use the bucket name and region name of your choice
+
+Package your deployment: 
+
+* sam package \
+--template-file ./lambda.yml \
+--output-template-file sam-template.yml \
+--s3-bucket cfsambucket
+
+* Deploy your package: 
+
+sam deploy \
+--template-file sam-template.yml \
+--stack-name mystack \
+--capabilities CAPABILITY_IAM
+
+
+
+

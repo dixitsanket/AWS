@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+									CLOUDFRONT
+									----------	
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A content delivery network(CDN) is a  system of distributed servers (network) that deliver webpages and other web content to a user based on the geographic location of the user, the origin of the wbepage, and a content delivery server.
+
+-> CloudFront Terminology:
+
+* Edge Location - This is the location where content is cached and can also be written.Seprate to an AWS Region/AZ
+
+* Origin - This is the origin of all the file that the CDN will distribute. Origin can be an S3 bucket ,an EC2 instance,an Elatic Load Balancer ,or Route53
+
+* Distribution: This is the name given the CDN,which consist of collection of edge location.
+
+* Web Distribution - Typically use for website
+
+* RTMP - Used for media streaming
+
+-> What is CloudFront?
+
+Amazon cloudfront can be used to deliver your entire website, including dynamic,static,streaming,and interactive content using global network of edge locations. Requests for your content are automatically routed to the nearest edge location, so content is delivered with the best possible performance.
+
+e.g. Can be used to be used to optimize performance for user accessing a website backed by S3
+
+Amazon CloudFront is optimized to work with other Amazon Web Services, like Amazon Simple Storage Service(Amazon S3),Amazon elastic compute cloud (Amamzon EC2), Amazon Elastic load balancing,and Amazon Route 53.Amzon CloudFront also works seemlessly with any non-AWS origin server, which store the original,definitive version of your files.
+
+CloudFront Distribution types:
+
+* Web Distribution - Used for Websites,HTTP/HTTPS
+* RTMP DIstribution - (Adobe Real Time Messaging Protocol) Used for Media Streaming/Flash multi-media content.
+
+-> S3 Transfer Acceleration:
+
+Amazono S3 transfer acceleration enables fast easy and secure transfer of files over long distance between your end user and an S3 bucket.
+
+Transfer acceleration take adavntage of Amazon CloudFronts globally distributed edge location.As the data arrives at an edge location, data is routed to amazon S3 over an optimized network path
+
+

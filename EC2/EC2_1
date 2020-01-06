@@ -1,0 +1,77 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									EC2
+									---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amazon EC2 is web service that provide resizeable compute capacity in the cloud .Amazon EC2 reduce the time req to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down,as you computing req changes
+
+* EC2 Options:
+
+-> On Denamnd - allows to pay by the hour with no comitment.
+
+-> Reserved - provides you with a capacity reservation and, offer a significant discount on the hourly charge for an instance. 1year or 3year terms.
+
+-> Spot - enables you to bid whatever price you want for instance capacity, providing for even greater saving if your application have flexible start and end time.
+
+-> Dedicated Host - physical EC2 server dedicated for your use. Dedicated Hosts help you to reduce cost by allowing you to your existing server-bound software licenses.
+
+* EC2 Instance Types:
+
+F1 - field programmble gate array
+I3 - high speed storage
+G3 - graphic intensive
+H1 - high disk throughput
+T2 - lowest cost general purpose 
+D2 - dense storage
+R4 - memory optimized 
+M5 - general purpose
+C5 - compute optimized
+P3 - graphic / general purpose gpu
+X1 - Memory optimization
+
+
+{
+F for FPGA
+I for IOPS
+G - Graphics
+H - High disk throughput
+T - Cheap general purpose
+D for Density
+R for RAM
+M - main choice for general purpose app
+C for Compute
+P Graphics
+x - Extreme memory
+}
+
+* EBS:
+
+Amazon EBS allows you to create storage volume and attach them to Amazon EC2 instance. Once attached , you can create file system on top of these volume , run a database , or use them in any other way you would use a block device. Amazon EBS volume are placed in a specific avialbility zone , where they are automatically replicated to protect you from the failure of single component.
+
+* Type of EBS Volume:
+
+-> General Purpose SSD(GP2):
+General purpose, balance both price and performance .
+Ratio of 3 IOPS per GB with upto 10,000 IOPS and the ability to burst up to 3000 IOPS for extended periods of time for volumes at 3334 GiB and above.
+
+-> Provisioned IOPS SSD(IO1):
+Design for I/O intensive application such as large relational or noSQL databases.
+Use if you need more than 10,000 IOPS.
+
+-> Throughput Optimized HDD (ST1):
+Big Data
+Data Warehouses
+log processing
+cannot be a boot volume
+
+-> Cold HDD (SC1):
+lowest cost storage for infrequent accessed workloads 
+file server
+cannot be boot volume
+
+-> Magnetic
+lowest cost per GB of all EBS volume type that is bootable. Magnetic volumes are ideal for workloads where data is accessed infrequently, and appication where the lowest storage cost is important.
+
+

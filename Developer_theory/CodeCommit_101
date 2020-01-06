@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									CODE COMMIT
+									-----------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Fully managed source control service that enable companies to host secure and highly scalable private git repositories.
+* Git is an industry-standard open source distributed source control system:
+	* Centralized repository for all your code,binaries,images,and libraries
+	* Track and manages code changes 
+	* Maintain version history 
+	* Manages updates from multiple sources	
+	* Enable colloboration
+
+-> CodeCommit Steps
+* User create a copy(know as a branch) of the master repository,which they can update independently without impacting other users 
+* Saved code changes which are ready to be applied to a repository are know as a commit 
+* When the updated code located in a branch is ready to be added to the master repository, the branch is then merged into master repository.
+* AWS CodeCommit provides all the functionality of Git and you can use Git
+on your local machine to interact with your CodeCommit repo.
+* Your data is encrypted in transit and at rest

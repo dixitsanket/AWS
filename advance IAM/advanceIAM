@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								WEB IDENTITY FEDRATION
+								----------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Web identity fedration lets you give your access to AWS resources after they have successfully authenticated with a web-based identity provider like amazon,facebook,google.
+
+Following successful authentication,the user receives an authentication code from the web id provider, which they can trade for temprory AWS security credentials
+
+-> Amazon Cognito:
+
+
+Amazon Cognito provides web identity fedration with following features 
+
+*Signup and signin to your apps
+*Access for guest user 
+*Act as an identity broker between your application and web id provided,so you dont need to write an additional code 
+*synchronise user data for multiple devices 
+*Recommaded for all mobile applications AWS services.
+
+The recomanded approach for web identity federation using social media accounts like facebook
+
+Cgnito broker between the app and facebook or google to provide temporary credentials which map to an iam role allowing access to the req resources.
+
+no need for the application to embed or store AWS credentials locally on the device and it gives user a seamless experience across all mobile devices
+
+
+-> Cognito User Pools
+
+User Pools are user directory used to manage signup and signin functionallity for mobile and web applications.
+
+User can sign-in directly to the user pool,or indirectly via an identity provider like facebook,amazon,or google.Cognito acts as an identity broker between the id provider and aws .Successful authentication generates a number of JSON web tokens
+
+Identity Pools enable you to create unique identities for your users and authenticate them with identity providers.with an identity ,you can obtain temporary,limited -privilege AWS credential to access other AWS services
+
+-> Push Synchronization
+
+Cognito tracks the association between user identity and the various different devices they sign-in-for
+
+In order to provide a seamless user experience for your application,Cognito uses Push Synchronization to push updates and synchronize user data across multiple devices.
+
+Amazon SNS is used to send a silent push notification to all the devices associated with a given user identity whenever data stored in the cloud changes.
+

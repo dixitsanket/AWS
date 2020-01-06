@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+						
+									DYNAMODB STREAMS
+									----------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Time-ordered sequence of item level modification (insert,update,delete)
+* Logs are encrypted at rest and store for 24 hours
+* Accessed using dedicated endpoint
+* By default the primary key is recorded
+* Before and after image can be captured
+* Events are recorded in near real-time
+* Application can take actions based on contents
+* Event source for lambda 
+* Lambda polls the dynamoDB stream
+* Execute lambda code based on dynamoDb stream event

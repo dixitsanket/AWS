@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									VERSION CONTROL
+									---------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Versioning
+
+When you use versiuonong in AWS Lambda,youcan publish one or more versions of your lambda function. As a result, you can work with different variations of your lambda function in your developmnet workflow, such ad development,beta and production.
+
+Each lambda function version has a unique amazon resoure name.after you publish a version ,it is immutable (that is,it cant be change).
+

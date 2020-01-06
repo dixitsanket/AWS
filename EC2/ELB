@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+						
+								ELASTIC LOAD BALANCER
+								---------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Load balancer help use to balancer our load across different server so no server get over load 
+
+-> Type of Load Balancer:
+
+* Application Load Balancer (works on OSI layer 7)
+* Network Load Balancer (works on layer 4)
+* Classic Load Balancer 
+
+-> Appication Load Balancer:
+
+Application load balancer are best suited for load balancing of HTTP and HTTPs traffic. They operate at layer 7 and are application-aware.They are intelligent, and you can create advance request routing, sending specified requests to specific web server.
+
+-> Network Load Balancer:
+
+Network Load Balancer are best suited for load balancing of TCP traffic where extreme performance is required. Operating at the connection level (layer4), network load balancer are capable of handling millions of requests per second, while maintaining ultra-low latencies.
+
+Use for extreme performance.
+
+-> Classic Load Balancer:
+
+Classic Load Balancer are the legacy Elastic Load Balancer. You can load balance HTTP/HTTPs application and use layer 7-specific features, such as X-Forwarded and sticky sessions.You can also use strict layer 4 load balancing for applications that rely purely on the tcp protocol.
+
+-> Load Balancer Errors: (ERROR 504)
+
+Clasic Load Balancer- if your application stop responding the ElB respond with a 504 error.
+
+This means that the application is having issue. this could be either at the web server layer or at the database layer.
+
+identify where the application is falling,and scale it up or out where possible.
+
+-> X-forwaded for header
+
+The X-Forwarded-For request header helps you identify the IP address of a client when you use an HTTP or HTTPS load balancer. Because load balancers intercept traffic between clients and servers, your server access logs contain only the IP address of the load balancer.
+
+
+
+
+public ip -----------------------> elastic load balancer (converts to provate ip) -----------------------> EC2 Instance
+

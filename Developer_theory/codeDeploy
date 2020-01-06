@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									CODE DEPLOY
+									-----------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* AWS CodeDeploy is an automated deployment service which allow you to deploy your application code automatically to EC2 instance,on-premise system and lambda functions.
+
+* Allows you to quickly release new features,avoid downtime during application deployments, and avoid the risks associated with manual deployment
+
+* Automatically scales with your infrastruture and integrates with various CI/CD tools, e.g. Jenkins,Github,Atlassian,AWS CodePipleline as well as config managment tools like ansible,Puppet and chef
+
+* Two deployment approches available:
+	* In-Place
+	* Blue/Green
+
+-> In-Place Deployment:
+	* The application is stopped on each insatance and the latest revision installed
+	* The instance is out of service during this time and your capacity will be reduced.
+	* If the instances are behind a load balancer, you can configure the load balancer to stop sending requests to the instance which are being upgraded.
+	* In-Place is also know as a Rolling update
+	* It can only be used for EC2 and on-premise system- it is not supported for lambda.
+	* If you need to roll back your changes,the previous version of the application will need to be re-deployed
+
+-> Blue/Green Deployment:
+	* New instance are provisioned and the latest revision is installed on the new instance. Blue represents the active deploymnet ,green is the new release
+	* The new instance are registered with an Elastic load balancer,traffic is then routed to the new instance and the original instance are eventually terminated.
+	* Advantages of Blue/Green deployment are that the new instances can be created ahead of time and the code released to the production by simply switching all traffic to the new servers.
+	* Switching back to the original enviroment is faster and more reliable and is just a case of routing the traffic back to original server (as long as you hav'nt already terminated them)
+
+-> AWS CodeDeploy - Terminology:
+	* Deployment Group- A set of EC2 instance or lambda function to which a new revision of the software is to be deployed
+	* Deployment- The process and component used to apply a new revision
+	* Deployment Configuration- A set of deployment rules as well as success/faliure conditions used during a deployment
+	* AppSpec File- Defines the deployment action you want AWS CodeDeploy to execute
+	* Revision- Everything needed to deploy the new version: AppSpec file, application files,executables,config files
+	* Application- Unique identifier for the application you want to deploy.To ensure the correct combination of revision, deployment configuration and deployment group are refrenced during a deployment.
+
+
+
+
+

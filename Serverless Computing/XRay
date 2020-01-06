@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									X RAY
+									-----
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS X-Ray is a service that collects data about requests that your application serves,and provides tools you can use to view ,filter,and gain insight into that data to identify issues and opportunities for optimiztion.For any traced request to your applicATION,you can see detailed information not only about the requests and respons,but also about calls that your application make to downstream AWS resources,microservices,databases and HTTP web APIs

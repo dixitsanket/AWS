@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									CD/CI									
+									-----	
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* CD & CI are best practices for software development and deployment 
+* They enable frequent software changes to be applied whilst maintaining system and service stability.
+
+-> Continuous Integration:
+
+-> Code Integration WordFlow:
+	* Multiple Developer working on different features or bug fixes 
+	* All contributing to the same application
+	* Sharing the same code repository (e.g. git)
+	* Frequently pushing their updates into the shared repo at least daily
+
+-> Continuous Delivery/Deployment:
+
+* CD can means either continuous delivery or continuous Deployment
+* Continuous Delivery is a Devlopment practice where merged changes are automatically built,tested,and prepared for release into staging and even tually production environments
+* There is usually a manual decision process to initiate deployment of the new code.
+
+
+
+
+
+
+
+

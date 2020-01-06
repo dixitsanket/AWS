@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									   SQS
+									   ---
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amazon SQS is web service that gives you access to message queue that can be used to store message while waiting for a computer to process them.
+
+Amazon SQS is a distributed queue system that enable web service applicationto quickly and reliable queue message that one component in the applications generates to be consumed by the another component.A queue is a temprory repository for message that are awaiting processing.
+
+Using Amazon SQS,you can decouple the components of an application so they run independly,easing message managment between components.
+
+Any component of a distributed application can store messages in the queue.Message can contain upto 256KB Of text in any format.Any component can retrive the messages programatically using the Amazon SQS API.
+
+-> There are two types of Queue:
+
+* Standard Queue (default)
+* FIFO Queue (First-in-first-out)
+
+-> Standard Queue 
+Amazon SQS offers standard as the default queue type.A standard queue lets you have a nearly-unlimited number of transaction per second.Standard queue gurantee that a messageis delivered atleast once.However,occasionally(because of the highly-distributed

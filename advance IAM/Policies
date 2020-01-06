@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									POLICIES
+									--------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Identity Access Management is used to define user access permission within AWS 
+
+There are 3 different Types of iam policies avaiable:
+
+* Managed Policies
+* Customer Managed Polocies
+* Inline Policies
+
+-> Managed Policy:
+
+A managed policy is an policy which is created and administrated by AWS
+
+AWS provide managed policies for common use cases based on job function e.g. AmazonDynamoDBFUllAccess,AWSCodeCommitPowerUser,AmzonEC2ReadOnlyAccess etc
+
+These Aws provided policies allow you to assign appropriate permissions to your users,groups and roles without having to write the policy yourself
+
+A single Managed Policy can be attached to multiple users,groups,or roles within the same AWS account and accross different accounts
+
+You cannot change the permission defined in an AWS managed policy.
+
+-> Customer Managed Policy:
+
+A CMP is a standalone policy that you create and administer inside your own AWS account.You can attach this policy to multiple user ,group and roles-but only with in your own AWS account
+
+In order to create a customer managed policy ,you can copy existing managed policy and customize it to fit the requirment of your organisation
+
+Recommended for use cases where the existing AWS Managed Policies dont meet the need of your enviroment
+
+-> Inline Policies:
+
+An Inline Poliy is an IAM which actually embedded within the user group or role to which it applies. There is a strict 1:1 relationship between the entity and the policy.
+
+When you delet th user,group,or role in which the inline policy is emebedde the policy will also be deleted 
+
+In most cases,AWS recommended using managed policies over iniline policies 
+
+Inline Policies are useful when you want to be sure that the permission in a policy are not inadvertenly assigned to any other user,group,or role than the one for which they're intended( i.e you are creating policy that must only ever be attached to a single user,group or role.)

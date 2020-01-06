@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								    ELASTICBEANSTALK
+								    ----------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Elastic Beanstalk is a service for deploying and scaling web application developed in many popular languages: Java, .NET,PHP,Node.js,Python,Ruby,Go,and Docker onto widely used application sever platform like apache tomcat,nginx,passenger,and IIS
+
+Developer can focus on writing code and dont need to worry about any pf the underlying infrastructure needed to run the application.
+
+You upload the code and elastic beanstalk will handle deployment,capacity provisioning,load balancing,auto scaling and application health.
+
+You retain full control of the underlying AWS resources powering your application and you pay only for the AWS resources required to store and run your application.
+
+* Fastest and simplest way to deploy your application in aws 
+* Automatically scales your application up and down
+* You can select the EC2 instance type that is optimal for your application
+* You can retain full admin control over the resources powering your application or have elastic Beanstalk do it for you.
+* Managed platform update feature automaticcally applies update your operating system,java,php,nodejs,etc.
+* Monitor and manage application health via a dashboard
+* Integrated with cloudwatch and xray for performance dataand metrics.
+
+
+

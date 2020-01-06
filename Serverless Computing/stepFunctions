@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								    STEP FUNCTION
+								    -------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Step function allows you to visualize and test your serverless applications.Step FUnctions provides graphical console to arrange and visualize the components of your application as a series of steps.This makes it simple to build and run multistep applications.Step function automatically trigger and tracks each step, and retries when there are error,so your application executes in order and as expected. Step FUnction log the state of each step,so when things do go wrong, you can diagnose and debug problem quickly. 

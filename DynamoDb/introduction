@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									DYNAMO DB
+									---------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Amazon DynamoDB is fast and flexible NoSQL database service for all application that need consistent, single digit millisecond latency at any scale. It is a fully managed databse and supports both document and key value data models.Its flexible data model and reliable performance make it a great fit for mobile,web,gaming,ad-tech,Iot and many other applications.
+
+* Stored on SSD storage
+* Spread Across 3 geographically distinct data centres
+* Choice of 2 consistency models:
+	* Eventual Consistent Reads(Default)
+	* Strongly Consistent Reads
+
+-> Eventual Consistent Reads:
+
+Consistency across all copies of data is usually reached within a second.Repeating a read after a short time should return the updated data.(Best Read Performance)
+
+-> Strongly Consistent Reads:
+
+A strongly consistency read returns a result that reflects all writes that recieved a successful response prior to the read.
+
+-> Tables
+	* Items
+	* Attribute
+	* Supports key-value and document data structures
+	* KEY = The name of data, Value = the data itself
+	* Documents can be written in JSON,HTML or XML
+
+-> DynamoDB-Primary Keys:
+	* DynamoDB stores and retrieves data based on primary key
+	* 2 types of primary key:
+		* Partition Key-unique attribute(eg userID)
+			* Value of the partition key is input to an internal hash function which determines the partiton or physical location on which 					the data is store 
+			* If you are using the partiton key as your primary key,then no two item can have same parttion key.
+
+		* Composite Key(Partiton Key+Sort Key):
+			* e.g. Same user posting multiple time to a a forum
+			* Primary Key would a Composite Key consisting of:
+			* Partition Key-UserID	
+			* Sort Key-Timestamp of the post
+			* 2 items may have the same partition key,but they must have a different Sort Key
+			* All item with the same partition key are stored together,then sorted according to the sort key value
+			* Allow you to store multiple items with same partiton key.
+
